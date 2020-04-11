@@ -20,8 +20,6 @@ const providers = [
   '@adonisjs/session/providers/SessionProvider',
   '@adonisjs/auth/providers/AuthProvider',
   '@adonisjs/websocket/providers/WsProvider',
-  'adonis-firebase-admin/providers/Firebase',
-  'adonis-firebase-admin/providers/FirebaseAdmin'
 ]
 
 /*
