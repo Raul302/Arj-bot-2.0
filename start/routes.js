@@ -17,3 +17,7 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+Route.get('index', 'Firebase/SavedatumController.index');
+Route.get('location', 'Firebase/SavedatumController.location');
+Route.post('location', 'Firebase/SavedatumController.savelocation');
