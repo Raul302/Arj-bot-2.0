@@ -18,6 +18,16 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 
-Route.get('index', 'Firebase/SavedatumController.index');
-Route.get('location', 'Firebase/SavedatumController.location');
-Route.post('location', 'Firebase/SavedatumController.savelocation');
+Route.group(() => {
+  Route.get('location','cloud/MongoController.location');
+  Route.post('location','cloud/MongoController.savelocation');
+  Route.get('fecha','cloud/MongoController.fecha');
+  Route.post('fecha','cloud/MongoController.savefecha');
+  Route.get('distancia','cloud/MongoController.distancia');
+  Route.post('distancia','cloud/MongoController.savedistancia');
+
+}).prefix('api')
+
+// Route.get('index', 'Firebase/SavedatumController.index');
+// Route.get('location', 'Firebase/SavedatumController.location');
+// Route.post('location', 'Firebase/SavedatumController.savelocation');

@@ -20,6 +20,7 @@ const providers = [
   '@adonisjs/session/providers/SessionProvider',
   '@adonisjs/auth/providers/AuthProvider',
   '@adonisjs/websocket/providers/WsProvider',
+  'lucid-mongo/providers/LucidMongoProvider'
 ]
 
 /*
@@ -32,7 +33,8 @@ const providers = [
 |
 */
 const aceProviders = [
-  '@adonisjs/lucid/providers/MigrationsProvider'
+  '@adonisjs/lucid/providers/MigrationsProvider',
+  'lucid-mongo/providers/MigrationsProvider'
 ]
 
 /*
