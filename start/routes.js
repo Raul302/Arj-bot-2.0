@@ -25,8 +25,16 @@ Route.group(() => {
   Route.post('fecha','cloud/MongoController.savefecha');
   Route.get('distancia','cloud/MongoController.distancia');
   Route.post('distancia','cloud/MongoController.savedistancia');
+}).prefix('api/mongo')
 
-}).prefix('api')
+Route.group(() => {
+  Route.get('location','cloud/FirebaseController.location');
+  Route.post('location','cloud/FirebaseController.savelocation');
+  Route.get('fecha','cloud/FirebaseController.fecha');
+  Route.post('fecha','cloud/FirebaseController.savefecha');
+  Route.get('distancia','cloud/FirebaseController.distancia');
+  Route.post('distancia','cloud/FirebaseController.savedistancia');
+}).prefix('api/firebase')
 
 // Route.get('index', 'Firebase/SavedatumController.index');
 // Route.get('location', 'Firebase/SavedatumController.location');
