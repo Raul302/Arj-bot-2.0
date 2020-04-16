@@ -39,3 +39,8 @@ Route.group(() => {
 // Route.get('index', 'Firebase/SavedatumController.index');
 // Route.get('location', 'Firebase/SavedatumController.location');
 // Route.post('location', 'Firebase/SavedatumController.savelocation');
+Route.group(() =>{
+  Route.post('login', 'UserController.login')
+  Route.post('register', 'UserController.register')
+  Route.get('mostrar/:id', 'UserController.show')
+}).prefix('/users')
