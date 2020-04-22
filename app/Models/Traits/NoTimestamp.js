@@ -1,5 +1,5 @@
 'use strict'
-
+// Refactoring
 class NoTimestamp {
   register (Model) {
     Object.defineProperties(Model, {

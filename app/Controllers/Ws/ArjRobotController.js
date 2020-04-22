@@ -1,5 +1,5 @@
   'use strict'
-
+// Refactoring
 class ArjRobotController {
   constructor ({ socket, request }) {
     this.socket = socket

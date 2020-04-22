@@ -8,3 +8,4 @@ result = ws.recv()
 result = json.loads(result)
 print (“Received ‘%s’” % result)
 ws.close()
+script:{(unitphp:Refactoring)}

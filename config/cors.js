@@ -27,7 +27,7 @@ module.exports = {
   |
   | String - Comma seperated list of allowed methods
   | Array - An array of allowed methods
-  |
+  // | Refactoring
   */
   methods: ['GET', 'PUT', 'PATCH', 'POST', 'DELETE'],
 
