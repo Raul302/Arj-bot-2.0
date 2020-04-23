@@ -1,5 +1,5 @@
 'use strict'
-
+// Refactoring
 class ConvertEmptyStringsToNull {
   async handle ({ request }, next) {
     if (Object.keys(request.body).length) {

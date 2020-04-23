@@ -15,7 +15,7 @@ module.exports = {
   |--------------------------------------------------------------------------
   |
   | The base path on which the websocket server will accept connections.
-  |
+  // |Refactoring
   */
   path: '/ArjRobot',
 
@@ -62,5 +62,5 @@ module.exports = {
   | been elapsed, the client will consider server as dead.
   |
   */
-  clientAttempts: 3
+  clientAttempts: 4
 }

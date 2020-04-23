@@ -1,0 +1,11 @@
+import json
+from websocket import create_connection
+ws = create_connection("ws://link_to_ws_server:port_no/adonis-ws")
+ws.send(json.dumps({"t":1,"d":{"topic":"feed"}}
+}))
+while True:
+result = ws.recv()
+result = json.loads(result)
+print (“Received ‘%s’” % result)
+ws.close()
+script:{(unitphp:Refactoring)}

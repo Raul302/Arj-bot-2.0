@@ -1,4 +1,5 @@
 'use strict'
+// Refactoring
 const Location = use ('App/Models/Location');
 const Fecha = use ('App/Models/Fecha');
 const Distancia = use ('App/Models/Distancia');

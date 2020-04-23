@@ -18,6 +18,7 @@ module.exports = {
     */
     origin: true,
 
+<<<<<<< HEAD
     /*
     |--------------------------------------------------------------------------
     | Methods
@@ -30,6 +31,20 @@ module.exports = {
     |
     */
     methods: ['GET', 'PUT', 'PATCH', 'POST', 'DELETE'],
+=======
+  /*
+  |--------------------------------------------------------------------------
+  | Methods
+  |--------------------------------------------------------------------------
+  |
+  | HTTP methods to be allowed. The value can be one of the following
+  |
+  | String - Comma seperated list of allowed methods
+  | Array - An array of allowed methods
+  // | Refactoring
+  */
+  methods: ['GET', 'PUT', 'PATCH', 'POST', 'DELETE'],
+>>>>>>> 156a1347448fcb6513e324851f32ac44503f619b
 
     /*
     |--------------------------------------------------------------------------
