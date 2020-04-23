@@ -16,7 +16,7 @@ module.exports = {
   | Available Serializers - lucid, database
   |
   */
-  authenticator: 'session',
+  authenticator: 'jwt',
 
   /*
   |--------------------------------------------------------------------------
@@ -35,21 +35,7 @@ module.exports = {
   password: 'password'
 },
 
-
-  /*
-  |--------------------------------------------------------------------------
-  | Basic Auth
-  |--------------------------------------------------------------------------
-  |
-  | The basic auth authenticator uses basic auth header to authenticate a
-  | user.
-  |
-  | NOTE:
-  | This scheme is not persistent and users are supposed to pass
-  | login credentials on each request.
-  |
-  */
- basic: {
+basic: {
   serializer: 'LucidMongo',
   model: 'App/Models/User',
   scheme: 'basic',
@@ -57,16 +43,7 @@ module.exports = {
   password: 'password'
 },
 
-  /*
-  |--------------------------------------------------------------------------
-  | Jwt
-  |--------------------------------------------------------------------------
-  |
-  | The jwt authenticator works by passing a jwt token on each HTTP request
-  | via HTTP `Authorization` header.
-  |
-  */
- jwt: {
+jwt: {
   serializer: 'LucidMongo',
   model: 'App/Models/User',
   token: 'App/Models/Token',
@@ -77,23 +54,15 @@ module.exports = {
   options: {
     secret: Env.get('APP_KEY')
   }
-  },
+},
 
-  /*
-  |--------------------------------------------------------------------------
-  | Api
-  |--------------------------------------------------------------------------
-  |
-  | The Api scheme makes use of API personal tokens to authenticate a user.
-  |
-  */
-  api: {
-    serializer: 'LucidMongo',
-    scheme: 'api',
-    model: 'App/Models/User',
-    token: 'App/Models/Token',
-    uid: 'username',
-    password: '',
-    expiry: '30d',
-  }
+api: {
+  serializer: 'LucidMongo',
+  scheme: 'api',
+  model: 'App/Models/User',
+  token: 'App/Models/Token',
+  uid: 'username',
+  password: '',
+  expiry: '30d',
+},
 }

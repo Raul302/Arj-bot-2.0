@@ -19,28 +19,31 @@ const Route = use('Route')
 Route.on('/').render('welcome')
 
 Route.group(() => {
-  Route.get('location','cloud/MongoController.location');
-  Route.post('location','cloud/MongoController.savelocation');
-  Route.get('fecha','cloud/MongoController.fecha');
-  Route.post('fecha','cloud/MongoController.savefecha');
-  Route.get('distancia','cloud/MongoController.distancia');
-  Route.post('distancia','cloud/MongoController.savedistancia');
+    Route.get('location', 'cloud/MongoController.location');
+    Route.post('location', 'cloud/MongoController.savelocation');
+    Route.get('fecha', 'cloud/MongoController.fecha');
+    Route.post('fecha', 'cloud/MongoController.savefecha');
+    Route.get('distancia', 'cloud/MongoController.distancia');
+    Route.post('distancia', 'cloud/MongoController.savedistancia');
 }).prefix('api/mongo')
 
 Route.group(() => {
-  Route.get('location','cloud/FirebaseController.location');
-  Route.post('location','cloud/FirebaseController.savelocation');
-  Route.get('fecha','cloud/FirebaseController.fecha');
-  Route.post('fecha','cloud/FirebaseController.savefecha');
-  Route.get('distancia','cloud/FirebaseController.distancia');
-  Route.post('distancia','cloud/FirebaseController.savedistancia');
+    Route.get('location', 'cloud/FirebaseController.location');
+    Route.post('location', 'cloud/FirebaseController.savelocation');
+    Route.get('fecha', 'cloud/FirebaseController.fecha');
+    Route.post('fecha', 'cloud/FirebaseController.savefecha');
+    Route.get('distancia', 'cloud/FirebaseController.distancia');
+    Route.post('distancia', 'cloud/FirebaseController.savedistancia');
 }).prefix('api/firebase')
 
 // Route.get('index', 'Firebase/SavedatumController.index');
 // Route.get('location', 'Firebase/SavedatumController.location');
 // Route.post('location', 'Firebase/SavedatumController.savelocation');
-Route.group(() =>{
-  Route.post('login', 'UserController.login')
-  Route.post('register', 'UserController.register')
-  Route.get('mostrar/:id', 'UserController.show')
-}).prefix('/users')
+
+
+
+Route.post('/login', 'AuthController.login')
+
+
+Route.get('/ir', "MapController.init")
+Route.post('/users', 'UserController.store')
