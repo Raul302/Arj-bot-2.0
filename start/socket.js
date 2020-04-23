@@ -15,8 +15,11 @@
 
 const Ws = use('Ws')
 
+// Ws.channel('chat', ({ socket }) => {
+//   console.log('user joined with %s socket id', socket.id)
+// })
+
 //Feed definitivo
-Ws.channel('feed','ArjRobotController')
-.middleware('auth');
+Ws.channel('feed','ArjRobotController');
 
 
